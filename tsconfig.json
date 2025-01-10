@@ -9,7 +9,11 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"moduleResolution": "bundler"
+		"moduleResolution": "bundler",
+		"baseUrl": "./", // 这个字段设置模块解析的基础目录，我们设置为项目根目录
+		"paths": {
+			"@/*": ["src/*"]  // 这个字段里面可以设置路径别名，我们设置@为src目录
+		}
 	}
 	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
 	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files
